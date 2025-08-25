@@ -38,14 +38,16 @@ function StopWatch() {
 
   return (
     <>
-    <h1>Stop Watch</h1>
-    <div>
-      <h5>Time : {formatTime()}</h5>
-      <div>
+   <div style={{ textAlign: "center", marginTop: "40px" }}>
+      <h1>Stopwatch</h1>
+      {/* 👇 important: Cypress expects exactly this format */}
+      <h2>Time: {formatTime()}</h2>  
+      
+      <div style={{ marginTop: "20px" }}>
         <button onClick={handleStartStop}>
           {isRunning ? "Stop" : "Start"}
         </button>
-        <button onClick={handleReset}>
+        <button onClick={handleReset} style={{ marginLeft: "10px" }}>
           Reset
         </button>
       </div>
